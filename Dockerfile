@@ -1,9 +1,7 @@
 FROM alpine:3.5
 
 ENV URL         https://github.com/h2o/h2o/archive
-# v2.0.5 can not build mruby
-#  https://github.com/h2o/h2o/pull/1149/files
-ENV H2O_VERSION 2.0.6
+ENV H2O_VERSION 2.2.0
 
 RUN set -ex \
         && apk add --no-cache --virtual .h2o-builddeps \
